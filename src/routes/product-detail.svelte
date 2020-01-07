@@ -121,6 +121,7 @@
 			product = [];
 			totalProduct = [];
 		}
+		count = 0;
 		console.log($productCart)		
 	}
 
