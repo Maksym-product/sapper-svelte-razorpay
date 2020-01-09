@@ -1,8 +1,9 @@
 <script>
     import {currentUser} from './../stores/user.js'
     import {onMount} from 'svelte'
-    import { tick } from 'svelte'
-    onMount(() => {
+    import { tick } from 'svelte'    
+
+    onMount(async() => {
         if (!$currentUser) {
             createLoginButton();
         }
@@ -39,7 +40,7 @@
 <!-- <div id="firebaseui-auth-container"></div> -->
 {#if $currentUser}
 <div class="mx-auto" style="max-width: 400px; position:relative;">
-    <button class="btn btn-warning mx-auto mt-3" style="width: 100px; position:absolute; right:0"
+    <button class="btn btn-danger mx-auto mt-3" style="width: 100px; position:absolute; right:0"
         on:click={() => {
             signOut();
         }}

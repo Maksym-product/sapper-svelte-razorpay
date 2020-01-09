@@ -14,6 +14,7 @@
 <script>
 	import Login from './../components/Login.svelte'
 	import {title} from './../stores/title.js'
+	import {currentUser} from './../stores/user.js'
 	import {onMount} from 'svelte'
 
 	let db = firebase.firestore();
@@ -29,7 +30,7 @@
 			if(products.length >= 1) {
 				flag = true
 			}
-		});		
+		});	
 	});
 
 	function setTitle() {

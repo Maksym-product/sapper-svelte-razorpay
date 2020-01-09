@@ -121,7 +121,7 @@
 			product = [];
 			totalProduct = [];
 		}
-		console.log($productCart)		
+		count = 0;		
 	}
 
 	function navTitle () {
@@ -150,7 +150,7 @@
 
 		<div class="form-inline">
 			<label for="sel1"><p style="font-size: 30px; margin-left: 10px; margin-right: 15px;margin-bottom: 0px;">Model:</p></label>
-			<select class="form-control" style="width:50%;" id="sel1" name="sellist1">
+			<select class="form-control" style="width:50%;cursor:pointer;" id="sel1" name="sellist1">
 				{#each productDetail[0].fields.model.values as model}
 				<option>{model.model}</option>
 				{/each}
@@ -166,9 +166,9 @@
 		</div>
 		<div class="quantity mt-4">
 			<h6 style="color:dimgray;">Quantity</h6>
-			<span class="badge badge-secondary" style="border-radius:0px;width:35px;height:35px;background-color:darkgrey;font-size:20px;" on:click={() => {decrement();}}>-</span>
+			<span class="badge badge-secondary" style="border-radius:0px;width:35px;height:35px;background-color:darkgrey;font-size:20px;cursor:pointer;" on:click={() => {decrement();}}>-</span>
 			<span class="badge badge-secondary" style="border-radius:0px;width:40px;height:35px;background-color:#f3f3f3;color:dimgray;margin-left:-5px;margin-right:-5px;font-size:20px;">{count}</span>
-			<span class="badge badge-secondary" style="border-radius:0px;width:35px;height:35px;background-color:darkgrey;font-size:20px;" on:click={() => {increment();}}>+</span>
+			<span class="badge badge-secondary" style="border-radius:0px;width:35px;height:35px;background-color:darkgrey;font-size:20px;cursor:pointer;" on:click={() => {increment();}}>+</span>
 		</div>
 		{/if}
 	</div>
@@ -182,7 +182,8 @@
 					border-radius:5px;
 					background:red;
 					font-size:25px;
-					font-weight:bold"
+					font-weight:bold;
+					pointer:cursor"
 			>
 				B U Y &nbsp; N O W
 			</a>

@@ -14,6 +14,8 @@
 			nav_title = "Product Detail"
 		} else if ($page.path == '/cart') {
 			nav_title = "Cart"
+		} else if ($page.path == './charge') {
+			nav_title = "Charge"
 		} else {
 			nav_title = "404"
 		}
@@ -54,9 +56,6 @@
 		background: var(--secondary);
 		color: #fff;
 	}
-	/* span.badge-notification {
-		margin-right: 24px;
-	} */
 	span.badge-notification[data-badge]::after {
 		top: -11px;
 		right: -14px;
@@ -75,16 +74,16 @@
 <nav class="container">
 	<ul class="nav justify-content-center">
 		<li class="nav-item">
-			<a class="nav-link" class:active='{segment === undefined}' href='.' on:click={() => {setTitle(event);}}>
-				<i class="fas fa-chevron-left" style="font-size:20px;color:rgba(255, 0, 0, 0.4);">&nbsp;Back</i>
+			<a class="nav-link mt-2" class:active='{segment === undefined}' href='.' on:click={() => {setTitle(event);}}>
+				<i class="fas fa-chevron-left" style="font-size:20px;color:rgba(255, 0, 0, 0.4);cursor: pointer;">&nbsp;Back</i>
 			</a>
 		</li>
-		<li class="nav-item">
-			<p style="margin-top:-5px;font-weight:bold;color:black;font-size:1.3rem;">{$title}</p>
+		<li class="nav-item" style="text-align:center;width:141px;">
+			<p style="margin-top:2px;font-weight:bold;color:black;font-size:1.3rem;">{$title}</p>
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" class:active='{segment === "cart"}' href='cart' on:click={() => {setTitle(event);}}>
-				<i class='fas fa-cart-plus' style='font-size:20px;color:rgba(255, 0, 0, 0.4);'>
+				<i class='fas fa-cart-plus mt-2 mb-0' style='font-size:20px;color:rgba(255, 0, 0, 0.4);cursor: pointer;'>
 					{#if $productCart}
 					{#if typeof $productCart[0] === "string"}
 					<span class="badge-notification mt-5" data-badge="1"></span>
@@ -96,6 +95,6 @@
 					{/if}
 				</i>
 			</a>
-		</li>		
+		</li>			
 	</ul>
 </nav>
