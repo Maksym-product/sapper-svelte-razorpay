@@ -21,6 +21,7 @@
 	function removeOne() {
 		productCart.set(null)
 	}
+<<<<<<< HEAD
 
 	function RequestOrderPayment () {
 		let key_id = "rzp_test_6hU64GtcNIjENJ";
@@ -107,6 +108,8 @@
 			console.log('POST error', err.message)
 		})
     }
+=======
+>>>>>>> 3241efc31e38e1f647841481754e33834676f468
 </script>
 
 <div class="container p-0">
@@ -120,6 +123,7 @@
 				<p><b>Model: </b><span style="color:dimgray">{$productCart[1]}</span></p>
 			</div>
 			<div class="col-3">
+<<<<<<< HEAD
 				<p class="mt-4 mb-0">₹{$productCart[2]} X {$productCart[3]}</p>
 				<button class="btn btn-default mt-1 p-0" style="color:blue;text-decoration:underline;" on:click={() => {removeOne();}}>Remove</button>
 			</div>		
@@ -129,6 +133,13 @@
 	<p>{paymentId}</p>
 	{/if}
 	<button class="razorpay-payment-button" on:click={() => {RequestOrderPayment();}}>Pay</button>
+=======
+				<p class="mt-5 mb-0">₹{$productCart[2]} X {$productCart[3]}</p>
+				<button class="btn btn-default m-0 p-0" style="color:blue;text-decoration:underline;" on:click={() => {removeOne();}}>Remove</button>
+			</div>		
+		</div>
+	</div>
+>>>>>>> 3241efc31e38e1f647841481754e33834676f468
 	{:else}
 	{#each $productCart as cart, i}
 	<div style="background-color:white;padding-left:5%;padding-right:5%">
@@ -145,7 +156,10 @@
 		</div>
 	</div>	
 	{/each}
+<<<<<<< HEAD
 	<button class="razorpay-payment-button" on:click={() => {RequestOrderPayment();}}>Pay</button>
+=======
+>>>>>>> 3241efc31e38e1f647841481754e33834676f468
 	{/if}
 	{#if $productCart.length === 0}
 	<h5 class="m-0 pt-2 pb-2" style="background-color:white;color:red;text-align:center;">{stateSentence}</h5>
@@ -179,5 +193,9 @@
 	{:else}
 	<h5 class="m-0 pt-2 pb-2" style="background-color:white;color:red;text-align:center;">{stateSentence}</h5>
 	{/if}
+<<<<<<< HEAD
 	{/if}		
 </div>
+=======
+</div>
+>>>>>>> 3241efc31e38e1f647841481754e33834676f468

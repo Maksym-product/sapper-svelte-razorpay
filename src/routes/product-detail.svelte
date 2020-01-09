@@ -121,7 +121,12 @@
 			product = [];
 			totalProduct = [];
 		}
+<<<<<<< HEAD
 		count = 0;		
+=======
+		count = 0;
+		console.log($productCart)		
+>>>>>>> 3241efc31e38e1f647841481754e33834676f468
 	}
 
 	function navTitle () {
