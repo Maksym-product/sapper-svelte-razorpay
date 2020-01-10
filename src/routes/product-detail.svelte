@@ -176,19 +176,6 @@
 	{#if $currentUser}
 	<div class="function mx-auto mt-2" style="background-color: #f3f3f3">
 		<button on:click={() => {cart();}} data='{id}' type="button" class="btn btn-primary btn-block" style="border:2px solid #b86b6b;background-color:indianred"><i class='fas fa-cart-plus'></i> ADD TO CART </button>
-		<!-- <div style="background-color:black;padding:3px 6px;margin-top:5px;">
-			<a type="button" class="btn btn-primary btn-block" href="/cart" on:click={() => {navTitle();}}
-				style="padding:0;
-					border-color: red;
-					border-radius:5px;
-					background:red;
-					font-size:25px;
-					font-weight:bold;
-					pointer:cursor"
-			>
-				B U Y &nbsp; N O W
-			</a>
-		</div>				 -->
 		<a href="/cart" on:click={() => {navTitle();}} type="button" class="btn btn-primary btn-block" style="border:2px solid #b86b6b;background-color:indianred"><i class="fas fa-donate"></i> B U Y &nbsp; N O W </a>
 	</div>
 	<Login />
