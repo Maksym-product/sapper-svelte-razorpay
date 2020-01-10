@@ -93,7 +93,7 @@
 			productCart.set(product);
 			product = [];
 		} else {
-			let flag = false;
+			let flag = false;y
 			if (typeof $productCart[0] === "string") {
 				totalProduct.push($productCart)
 			} else {
@@ -121,12 +121,8 @@
 			product = [];
 			totalProduct = [];
 		}
-<<<<<<< HEAD
-		count = 0;		
-=======
 		count = 0;
 		console.log($productCart)		
->>>>>>> 3241efc31e38e1f647841481754e33834676f468
 	}
 
 	function navTitle () {
@@ -179,8 +175,8 @@
 	</div>
 	{#if $currentUser}
 	<div class="function mx-auto mt-2" style="background-color: #f3f3f3">
-		<button on:click={() => {cart();}} data='{id}' type="button" class="btn btn-primary btn-block" style="border:0;border-radius:0px;background-color:indianred"><i class='fas fa-cart-plus'></i> ADD TO CART </button>
-		<div style="background-color:black;padding:3px 6px;margin-top:5px;">
+		<button on:click={() => {cart();}} data='{id}' type="button" class="btn btn-primary btn-block" style="border:2px solid #b86b6b;background-color:indianred"><i class='fas fa-cart-plus'></i> ADD TO CART </button>
+		<!-- <div style="background-color:black;padding:3px 6px;margin-top:5px;">
 			<a type="button" class="btn btn-primary btn-block" href="/cart" on:click={() => {navTitle();}}
 				style="padding:0;
 					border-color: red;
@@ -192,7 +188,8 @@
 			>
 				B U Y &nbsp; N O W
 			</a>
-		</div>				
+		</div>				 -->
+		<a href="/cart" on:click={() => {navTitle();}} type="button" class="btn btn-primary btn-block" style="border:2px solid #b86b6b;background-color:indianred"><i class="fas fa-donate"></i> B U Y &nbsp; N O W </a>
 	</div>
 	<Login />
 	{/if}
